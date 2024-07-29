@@ -41,6 +41,6 @@ def test_to_pbs(job: Job):
 #PBS -M user@foo.com
 #PBS -N test
 #PBS -q short
-#PBS --walltime=12:00:00
+#PBS -l walltime=12:00:00
 #PBS -l select=5:mem=16G:ompthreads=20:node_type=rome"""
     assert job.to_pbs() == reference

@@ -50,7 +50,7 @@ class Job(AliasHandler):
                 lines.append(f"#PBS -{item} {value}")
         for item in filter(self.hasattr, PBS_L_JOB_WIDE_OPTIONS):
             for value in self.get_arguments(item):
-                lines.append(f"#PBS --{item}={value}")
+                lines.append(f"#PBS -l {item}={value}")
         select_options = list(filter(self.hasattr, PBS_L_SELECT_OPTIONS))
         if len(select_options) == 0:
             return "\n".join(lines)
