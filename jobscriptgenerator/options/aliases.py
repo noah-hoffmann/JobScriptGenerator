@@ -18,4 +18,5 @@ ALIASES = {
     "nodelist": ["w"],
     "exclude": ["x"],
     "extra_node_info": ["B"],
+    "cpus_per_task": ["ompthreads"],
 }

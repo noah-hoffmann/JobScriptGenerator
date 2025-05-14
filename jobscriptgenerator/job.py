@@ -54,7 +54,7 @@ class Job(AliasHandler):
         select_options = list(filter(self.hasattr, PBS_L_SELECT_OPTIONS))
         if len(select_options) == 0:
             return "\n".join(lines)
-        # the first found arguments has to be select containing the number of nodes
+        # the first found arguments has to be 'select' containing the number of nodes
         assert select_options[0] == "select"
         n_select = len(self.get_arguments(select_options[0]))
         for i in range(n_select):
